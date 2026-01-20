@@ -20,6 +20,8 @@ public class admin extends HttpServlet {
         for (Part part : req.getParts()) {
             part.write(uploadPath);
         }
-        resp.sendRedirect("admin.jsp");
+        String message = "File uploaded successfully";
+        req.setAttribute("message", message);
+        req.getRequestDispatcher("admin.jsp").forward(req, resp);
     }
 }

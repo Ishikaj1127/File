@@ -20,9 +20,8 @@ public class fileController extends HttpServlet {
         String course = req.getParameter("course");
         try {
             filedata = fileRead.readFile(course);
+            String videoPath= course + ".mp4";
             req.setAttribute("filedata", filedata);
-
-            String videoPath = getServletContext().getRealPath("") + File.separator + course + ".mp4";
             req.setAttribute("videoPath", videoPath);
             req.getRequestDispatcher("result.jsp").forward(req, resp);
         } catch (Exception e) {

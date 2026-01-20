@@ -8,7 +8,7 @@
     <body>
         <div>
             <p>${filedata}</p>
-            <video height="240" width="320" controls>
+            <video height="500px" width="400px" controls>
                 <source src="${videoPath}" type="video/mp4">
             </video>
         </div>
