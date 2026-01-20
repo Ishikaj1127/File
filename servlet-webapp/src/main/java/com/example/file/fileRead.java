@@ -5,9 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class fileRead {
-    public static String readFile() {
+    public static String readFile(String filename) {
         try {
-            String path = System.getProperty("java.io.tmpdir") + "/file.txt";
+            String path = System.getProperty("java.io.tmpdir") + "/" + filename + ".txt";
             FileReader fr = new FileReader(path);
             BufferedReader buff = new BufferedReader(fr);
             String data = "";

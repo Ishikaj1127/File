@@ -9,8 +9,13 @@
         <div>
             <h2>Enter details</h2>
             <form method="post" action="submit">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="number" name="age" placeholder="Age" required>
+                <select name="course">
+                    <option value="">--select--</option>
+                    <option value="c">C</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+
+                </select>
                 <button type="submit">Submit</button>
             </form>
         </div>

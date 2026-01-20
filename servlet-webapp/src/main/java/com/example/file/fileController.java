@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.File;
 
 @WebServlet("/submit")
 public class fileController extends HttpServlet {
@@ -16,14 +17,13 @@ public class fileController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        String age = req.getParameter("age");
+        String course = req.getParameter("course");
         try {
-            String path = System.getProperty("java.io.tmpdir") + "/file.txt";
-            FileWriter fw = new FileWriter(path, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write("Name: " + name + "\nAge: " + age + "\n");
-            bw.close();
+            filedata = fileRead.readFile(course);
+            req.setAttribute("filedata", filedata);
+
+            String videoPath = getServletContext().getRealPath("") + File.separator + course + ".mp4";
+            req.setAttribute("videoPath", videoPath);
             req.getRequestDispatcher("result.jsp").forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
