@@ -3,10 +3,11 @@
 
     <head>
         <title>File Upload</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <div>
+        <div id="Cform">
             <h2>Enter details</h2>
             <form method="post" action="submit">
                 <select name="course">

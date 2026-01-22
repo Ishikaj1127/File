@@ -16,11 +16,11 @@ public class admin extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Part filePart = req.getPart("video");
         String fileName = filePart.getSubmittedFileName();
-        String uploadPath = getServletContext().getRealPath("") + File.separator + fileName;
+        String uploadPath = System.getProperty("java.io.tmpdir") + File.separator + fileName;
         for (Part part : req.getParts()) {
             part.write(uploadPath);
         }
-        String message = "File uploaded successfully";
+        String message = "Video uploaded successfully";
         req.setAttribute("message", message);
         req.getRequestDispatcher("admin.jsp").forward(req, resp);
     }

@@ -2,7 +2,6 @@ package com.example.file;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class fileRead {
     public static String readFile(String filename) {
