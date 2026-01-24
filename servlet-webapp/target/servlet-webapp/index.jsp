@@ -9,7 +9,7 @@
     <body>
         <div id="Cform">
             <h2>Enter details</h2>
-            <form method="post" action="submit">
+            <form method="post" action="load.jsp">
                 <select name="course">
                     <option value="">--select--</option>
                     <option value="c">C</option>

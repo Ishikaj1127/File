@@ -13,6 +13,7 @@ public class fileController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String course = req.getParameter("course");
         try {
             filedata = fileRead.readFile(course);
@@ -20,6 +21,7 @@ public class fileController extends HttpServlet {
             req.setAttribute("filedata", filedata);
             req.setAttribute("videoPath", videoPath);
             req.getRequestDispatcher("result.jsp").forward(req, resp);
+
         } catch (Exception e) {
             e.printStackTrace();
             return;

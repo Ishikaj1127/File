@@ -9,7 +9,7 @@
     <body>
         <div>
             <p>${filedata}</p>
-            <video height="400px" width="300px" controls>
+            <video height="300px" width="400px" controls>
                 <source src="${videoPath}" type="video/mp4">
             </video>
         </div>
