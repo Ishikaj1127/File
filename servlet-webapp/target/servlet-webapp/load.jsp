@@ -22,7 +22,7 @@
             <script>
                 setTimeout(function () {
                     document.getElementById("hiddenForm").submit();
-                }, 1000); // 2 seconds delay
+                }, 1000);
             </script>
     </div>
 </body>

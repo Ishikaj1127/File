@@ -1,26 +1,19 @@
-<%@ page import="java.io.*" %>
-    <html>
+<html>
 
-    <head>
-        <title>File Upload</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <div id="Cform">
-            <h2>Enter details</h2>
-            <form method="post" action="load.jsp">
-                <select name="course">
-                    <option value="">--select--</option>
-                    <option value="c">C</option>
-                    <option value="java">Java</option>
-                    <option value="python">Python</option>
+<body>
+    <div class="form">
+        <form action="login" method="post">
+            <input type="text" name="username" placeholder="Email or Phone Number">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+        <a href="signup.jsp"><button type="submit">Create Account</button></a>
+    </div>
+</body>
 
-                </select>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-    </body>
-
-    </html>
+</html>
