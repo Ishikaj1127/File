@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    <div class="form">
-        <form action="login" method="post">
+    <div class="Cform">
+        <form action="signup" method="post">
             <input type="text" name="username" placeholder="Email or Phone Number">
             <input type="password" name="password" placeholder="Password">
             <button type="submit">Login</button>

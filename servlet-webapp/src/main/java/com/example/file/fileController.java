@@ -12,16 +12,6 @@ public class fileController extends HttpServlet {
     String filedata;
 
     @Override
-    public void init() throws ServletException {
-        super.init();
-        try {
-            DatabaseUtil.initDatabase();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String course = req.getParameter("course");
         try {

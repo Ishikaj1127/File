@@ -10,7 +10,7 @@
         <div style="height: 60px;">
             <h2>Create New Account</h2>
         </div>
-        <form action="signin" method="post">
+        <form action="signup" method="post">
             <div style="display: flex; gap: 20px;"><input type="text" name="fname" placeholder="First Name" required
                     style="width: 215px;">
                 <input type="text" name="lname" placeholder="Surname" required style="width: 215px;">

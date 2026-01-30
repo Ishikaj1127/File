@@ -1,4 +1,5 @@
 com/example/file/fileController.class
+com/example/file/controller.class
 com/example/file/DatabaseUtil.class
 com/example/file/fileRead.class
 com/example/file/admin.class

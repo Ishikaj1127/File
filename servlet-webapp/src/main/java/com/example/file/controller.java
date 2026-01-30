@@ -1,6 +1,7 @@
 package com.example.file;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,9 +9,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/signin")
+@WebServlet("/signup")
 public class controller extends HttpServlet {
     String loginUser;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        try {
+            DatabaseUtil.initDatabase();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,8 +41,8 @@ public class controller extends HttpServlet {
             req.setAttribute("gender", gender);
             req.setAttribute("password", password);
             req.getRequestDispatcher("course.jsp").forward(req, resp);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            throw new ServletException(e);
         }
 
         try {
@@ -43,8 +54,8 @@ public class controller extends HttpServlet {
             } else {
                 req.getRequestDispatcher("index.jsp").forward(req, resp);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            throw new ServletException(e);
         }
     }
 
