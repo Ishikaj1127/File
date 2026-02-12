@@ -70,6 +70,8 @@ button {
 }
 
 #signup {
+    height: 520px;
+    width: 450px;
     border-radius: 20px;
     border: 1px solid black;
 }

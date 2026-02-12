@@ -12,11 +12,11 @@
         </div>
         <form action="signup" method="post">
             <div style="display: flex; gap: 20px;"><input type="text" name="fname" placeholder="First Name" required
-                    style="width: 215px;">
-                <input type="text" name="lname" placeholder="Surname" required style="width: 215px;">
+                    style="width: 200px;">
+                <input type="text" name="lname" placeholder="Last Name" required style="width: 200px;">
             </div>
             <p style="margin: 0;">Date of Birth</p>
-            <input type="date" name="birthday" required>
+            <input type="date" name="dob" required style="width: 420px;">
             <p style="margin: 0;">Gender</p>
             <div style="display: flex; gap: 15px;"><label><input type="radio" name="gender" value="Male"
                         style="height: 15px; width: 15px;">Male</label>
@@ -25,8 +25,9 @@
                 <label><input type="radio" name="gender" value="Custom"
                         style="height: 15px; width: 15px;">Custom</label>
             </div>
-            <input type="text" name="username" placeholder="Mobile number or email address" required>
-            <input type="password" name="pass" placeholder="Password" required>
+            <input type="text" name="username" placeholder="Mobile number or email address" required
+                style="width: 420px;">
+            <input type="password" name="pass" placeholder="Password" required style="width: 420px;">
             <button type="submit">Sign In</button>
         </form>
     </div>

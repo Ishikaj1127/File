@@ -33,12 +33,12 @@ public class controller extends HttpServlet {
         String gender = req.getParameter("gender");
 
         try {
-            DatabaseUtil.addUser(fname, lname, username, dob, gender, password);
+            DatabaseUtil.addUser(fname, lname, dob, gender, username, password);
             req.setAttribute("fname", fname);
             req.setAttribute("lname", lname);
-            req.setAttribute("username", username);
             req.setAttribute("dob", dob);
             req.setAttribute("gender", gender);
+            req.setAttribute("username", username);
             req.setAttribute("password", password);
             req.getRequestDispatcher("course.jsp").forward(req, resp);
         } catch (SQLException e) {

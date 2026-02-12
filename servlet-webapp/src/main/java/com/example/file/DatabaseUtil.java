@@ -47,7 +47,7 @@ public class DatabaseUtil {
 
     public static void addUser(String fname, String lname, String number, String dob, String gender, String password)
             throws SQLException {
-        String sql = "insert into users(fname, lname, number, dob, gender, password) values(?, ?, ?, ?, ?, ?)";
+        String sql = "insert into users(fname, lname, dob, gender, number, password) values(?, ?, ?, ?, ?, ?)";
         try (Connection connect = getConnection();
                 PreparedStatement pstmt = connect.prepareStatement(sql)) {
             pstmt.setString(1, fname);
